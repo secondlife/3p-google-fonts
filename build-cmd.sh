@@ -40,6 +40,5 @@ FONTS_DIR="${STAGING_DIR}/fonts"
 test -d ${FONTS_DIR} || mkdir ${FONTS_DIR}
 
 cp -v "${SRC_DIR}"/*.ttf  "${FONTS_DIR}"
-cp -v "${SRC_DIR}"/static/*.ttf  "${FONTS_DIR}"
 
 
