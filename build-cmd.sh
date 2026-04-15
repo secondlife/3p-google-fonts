@@ -39,6 +39,9 @@ echo "${fonts_version}.${build}" > "${STAGING_DIR}/VERSION.txt"
 FONTS_DIR="${STAGING_DIR}/fonts"
 test -d ${FONTS_DIR} || mkdir ${FONTS_DIR}
 
-cp -v "${SRC_DIR}"/*.ttf  "${FONTS_DIR}"
+# Copy and rename variable fonts to remove commas (viewer builds don't like them)
+cp -v "${SRC_DIR}/Inter-Italic-VariableFont_opsz,wght.ttf" "${FONTS_DIR}/InterItalicVariableFont.ttf"
+cp -v "${SRC_DIR}/Inter-VariableFont_opsz,wght.ttf" "${FONTS_DIR}/InterVariableFont.ttf"
+
 
 
